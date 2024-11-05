@@ -1,7 +1,11 @@
-# Reproducibility and Replicability in Geospatial Data Science
-
+# Intro to quarto
 ## About
 
+Thank you to Nick Bearman for providing an early version of these slides.
+
+- Presentation slides available @ (https://nickbearman.github.io/reproducibility-replicability-gds-penn)
+- qmd document available on the repo @
+- 
 Slides for presentation on "Reproducibility and Replicability in Geospatial Data Science" by Nick Bearman on 18 April 2024. Available at [https://nickbearman.github.io/reproducibility-replicability-gds-penn](https://nickbearman.github.io/reproducibility-replicability-gds-penn).
 
 ## Requirements
