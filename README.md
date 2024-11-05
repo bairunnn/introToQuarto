@@ -4,9 +4,11 @@
 
 Thank you to Nick Bearman for providing an early version of these slides.
 
-- Presentation slides available @ [here](https://github.com/ericdelmelle/introToQuarto/tree/main/docs/index.html)
-- qmd document the presentation is based off [here](https://github.com/ericdelmelle/introToQuarto/tree/main/presentation_nov5.qmd)
-- intial qmd for the exercise [here](https://github.com/ericdelmelle/introToQuarto/tree/main/exercise.qmd)
+- [**repo**](https://github.com/ericdelmelle/introToQuarto)
+- [presentation deck](https://ericdelmelle.github.io/introToQuarto)
+- [qmd document the presentation](https://github.com/ericdelmelle/introToQuarto/tree/main/index.qmd)
+- [exercise qmd](https://github.com/ericdelmelle/introToQuarto/tree/main/exercise.qmd)
+- Rmd for getting PA population density [here](https://github.com/ericdelmelle/introToQuarto/tree/main/densityMaps.Rmd)
 
 
 ## Requirements
