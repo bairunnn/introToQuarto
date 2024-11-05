@@ -243,5 +243,166 @@
     "title": "Exercise for class",
     "section": "Objectives",
     "text": "Objectives\n\nadd an interactive map using leaflet \nadd some references via a .bib file\npush it on github"
+  },
+  {
+    "objectID": "index.html#outline-learning-objectives",
+    "href": "index.html#outline-learning-objectives",
+    "title": "Introduction to Quarto",
+    "section": "Outline & Learning objectives:",
+    "text": "Outline & Learning objectives:\n\n\nWhat is reproducibility and replicability?\nWhy do it & how we do it?\n\n\n\n\nUnderstand what reproducibility and replicability are\nHow quarto can be used to create documents, web pages, in an effort to increase replicability and reproducibility\ncreate your own presentation"
+  },
+  {
+    "objectID": "index.html#what-is-reproducibility",
+    "href": "index.html#what-is-reproducibility",
+    "title": "Introduction to Quarto",
+    "section": "What is Reproducibility?",
+    "text": "What is Reproducibility?\n\n\nAbility for other people with a similar level of skill to reproduce your work.\nOther people:\n\ncolleagues in company,\ngroup members in a project,\nyourself in a year when you want to use your project work for something else,\n\nFundamental part of research\nAlso is best practice - which will allow others to reproduce your work."
+  },
+  {
+    "objectID": "index.html#sometimes-we-get-confused-into-the-terminology",
+    "href": "index.html#sometimes-we-get-confused-into-the-terminology",
+    "title": "Introduction to Quarto",
+    "section": "Sometimes we get confused into the terminology…",
+    "text": "Sometimes we get confused into the terminology…\n\n“[…] when the same analysis steps performed on the same dataset […] produce the same answer.” (Turing Way)\n\n\n\nby Scriberia for The Turing Way community (CC-BY 4.0)"
+  },
+  {
+    "objectID": "index.html#why-we-need-reproducibility",
+    "href": "index.html#why-we-need-reproducibility",
+    "title": "Introduction to Quarto",
+    "section": "Why we need Reproducibility?",
+    "text": "Why we need Reproducibility?\n\n\nWe need to have confidence that our research is good quality and we are doing good science\nPeter Fisher (1993) compared seven different pieces of GIS software doing a viewshed analysis\nand got seven (slightly) different results!"
+  },
+  {
+    "objectID": "index.html#why-do-it",
+    "href": "index.html#why-do-it",
+    "title": "Introduction to Quarto",
+    "section": "Why do it?",
+    "text": "Why do it?\n\nFisher also discovered a major error in one piece of software which gave completely incorrect results.\nHighlights the need for:\n\nStandards & testing to make sure this doesn’t happen\nAlgorithms used to be published so people can see what is happening\nIssues when only binary files are available, and not the source code\n\n\nFisher, P. F. (1993). Algorithm and implementation uncertainty in viewshed analysis. International Journal of Geographical Information Systems, 7(4), 331–347. https://doi.org/10.1080/02693799308901965"
+  },
+  {
+    "objectID": "index.html#why-do-it-1",
+    "href": "index.html#why-do-it-1",
+    "title": "Introduction to Quarto",
+    "section": "Why do it?",
+    "text": "Why do it?\n\nStandards & testing to make sure this doesn’t happen\nAlgorithms used to be published so people can see what is happening\n\nPublish algorithms in journals\nEven more important with machine learning - transparency is important\n\nIssues when only binary files are available, and not the source code\n\nGrowth in open source software - so you can see (and unpick) what is happening"
+  },
+  {
+    "objectID": "index.html#research",
+    "href": "index.html#research",
+    "title": "Introduction to Quarto",
+    "section": "Research",
+    "text": "Research\n\n\nSome journals & conferences ask you to submit code along with your paper\nAGILE - https://reproducible-agile.github.io/\nAnyone (with a similar level of skills) should be able to do reproduce your research and benefit from it.\nOne reason for open source tools.\nIf you do analysis in ArcGIS Pro, you need ArcGIS Pro to recreate that analysis.\nIf you don’t have ArcGIS Pro, what do you do?"
+  },
+  {
+    "objectID": "index.html#how-do-we-do-this",
+    "href": "index.html#how-do-we-do-this",
+    "title": "Introduction to Quarto",
+    "section": "How do we do this?",
+    "text": "How do we do this?\n\n\nDocumenting what you did is standard - Methods\nIf you can do what you did in a script, then you can also share this\nArcGIS Pro / QGIS\n\ngraphical interface, click buttons, etc\n\nR / Python\n\nwrite out the script"
+  },
+  {
+    "objectID": "index.html#setup---environments",
+    "href": "index.html#setup---environments",
+    "title": "Introduction to Quarto",
+    "section": "Setup - “environments”",
+    "text": "Setup - “environments”\n\n\nTo replicate a piece of work, you need to know what software they used\nWhat version?\nWhich libraries / packages?\nWhat version of libraries or packages?"
+  },
+  {
+    "objectID": "index.html#writing-presentations",
+    "href": "index.html#writing-presentations",
+    "title": "Introduction to Quarto",
+    "section": "Writing, Presentations",
+    "text": "Writing, Presentations\n\nAlso works for writing and presentations as well.\n\nMarkdown allows you to write plan text with tags - stars, hashes, etc.\nCan also do analysis in this\nLaTeX is a developved version of Markdown (or Markdown is a simple version of LaTeX)\nRMarkdown allows you to run R code\nQuarto allows you to run other code (Python, R, etc.)\nThis presentation is written in Quarto 😄"
+  },
+  {
+    "objectID": "index.html#lets-dive-into-quarto",
+    "href": "index.html#lets-dive-into-quarto",
+    "title": "Introduction to Quarto",
+    "section": "Let’s dive into Quarto",
+    "text": "Let’s dive into Quarto\n\nQuarto is a new, open-source, scientific and technical publishing system\nCombine text and code to produce formatted documents\nPublish reproducible and dynamic presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, etc.\nMulti-language support for R, Python, Julia, and more\nQuarto extends RMarkdown and shares similarities with Juypter Notebooks.\n\n\nArtwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst."
+  },
+  {
+    "objectID": "index.html#formats",
+    "href": "index.html#formats",
+    "title": "Introduction to Quarto",
+    "section": "Formats",
+    "text": "Formats\n\nDocuments: HTML, PDF, MS Word, Open Office, ePub\nPresentations: Revealjs, PowerPoint,\nWikis: MediaWiki, JiraWiki, …\nMany templates exist for academic documents: quarto-journals\nAnd much more: Jupyter, RTF, InDesign, …"
+  },
+  {
+    "objectID": "index.html#how-does-quarto-work",
+    "href": "index.html#how-does-quarto-work",
+    "title": "Introduction to Quarto",
+    "section": "How does Quarto work?",
+    "text": "How does Quarto work?\n\n\n\ntaken from What is Quarto - A Quick Intro FAQ\n\n\n.qmd\n\n\n\nqmd file\n\n\n.ipynb\n\n\n\njupyter notebook"
+  },
+  {
+    "objectID": "index.html#how-does-quarto-handle-code-chunks",
+    "href": "index.html#how-does-quarto-handle-code-chunks",
+    "title": "Introduction to Quarto",
+    "section": "How does Quarto handle code chunks?",
+    "text": "How does Quarto handle code chunks?\n\nexample with the iris dataset (flowers)\n\n\ndata(iris)\n\nplot(iris$Sepal.Length, iris$Sepal.Width, \n     main = \"Scatter Plot of Sepal Length vs Sepal Width\",\n     xlab = \"Sepal Length (cm)\",\n     ylab = \"Sepal Width (cm)\",\n     pch = 16, col = iris$Species)"
+  },
+  {
+    "objectID": "index.html#plots",
+    "href": "index.html#plots",
+    "title": "Introduction to Quarto",
+    "section": "Plots",
+    "text": "Plots\n```{r}\n#| label: \"iris-plot\"\n#| echo: TRUE\n#| fig-format: svg\n#| cache: TRUEs\n\ndata(iris)\n\nplot(iris$Sepal.Length, iris$Sepal.Width, \n     main = \"Scatter Plot of Sepal Length vs Sepal Width\",\n     xlab = \"Sepal Length (cm)\",\n     ylab = \"Sepal Width (cm)\",\n     pch = 16, col = iris$Species)\n\n```\ndefaults to knitr engine (you can override the engine with engine: jupyter)\n```{python}\n#| label: fig-polar\n#| fig-cap: \"A line plot on a polar axis\"\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n```"
+  },
+  {
+    "objectID": "index.html#air-quality",
+    "href": "index.html#air-quality",
+    "title": "Introduction to Quarto",
+    "section": "Air Quality",
+    "text": "Air Quality\nFigure 1 further explores the impact of temperature on ozone level.\n\nFigure 1: Temperature and ozone level."
+  },
+  {
+    "objectID": "index.html#population-density-map-in-pa-2010",
+    "href": "index.html#population-density-map-in-pa-2010",
+    "title": "Introduction to Quarto",
+    "section": "Population density map in PA, 2010",
+    "text": "Population density map in PA, 2010\n\ncode was run in a markdown, and image saved"
+  },
+  {
+    "objectID": "index.html#population-density-map-in-pa-2010-interactive",
+    "href": "index.html#population-density-map-in-pa-2010-interactive",
+    "title": "Introduction to Quarto",
+    "section": "Population density map in PA, 2010 (interactive)",
+    "text": "Population density map in PA, 2010 (interactive)"
+  },
+  {
+    "objectID": "index.html#strengths-weaknesses-of-quarto-for-slides",
+    "href": "index.html#strengths-weaknesses-of-quarto-for-slides",
+    "title": "Introduction to Quarto",
+    "section": "Strengths & Weaknesses of Quarto for slides",
+    "text": "Strengths & Weaknesses of Quarto for slides\n\n\nStrengths 💪\n\nConsistency in Output\n\nFocus on content\n\nSupport for (Explicit) Version Control (e.g. git)\nGreat for Code (in Slides)\nAutomation / Generated Contents\nInteractivity\n\n\nWeaknesses 😢\n\nHarder to do fine layouting\n\nNo WYSIWYG\n\nNew Syntax to learn\nSoftware Maturity"
+  },
+  {
+    "objectID": "index.html#key-benefit-explicit-version-control-fa-code-compare",
+    "href": "index.html#key-benefit-explicit-version-control-fa-code-compare",
+    "title": "Introduction to Quarto",
+    "section": "Key Benefit: (Explicit) Version Control ",
+    "text": "Key Benefit: (Explicit) Version Control \n\n\n\n\n\nby Scriberia for The Turing Way community (CC-BY 4.0)\n\n\n\n\nGoing back through time\nGreat for collaboration\nAllow sharing and adaptation\n\nJust like this presentation\n\nAllows automation\n\n\n\nPractice what you preach!\nBy setting up your teaching materials in a reproducible manner, you demonstrate the value of reproducibility directly\n\nUseful for others\nUseful for future you when you teach this course again"
+  },
+  {
+    "objectID": "index.html#additional-resources",
+    "href": "index.html#additional-resources",
+    "title": "Introduction to Quarto",
+    "section": "Additional Resources",
+    "text": "Additional Resources\n\nThe Turing Way handbook to reproducible, ethical and collaborative data science\nRichard McElreath (2020). Science as amateur software development. YouTube\nQuarto\n\nQuarto Documentation\nQuarto for Academics by Mine Çetinkaya-Rundel\n\nVersion Control\n\nVersion Control Book\ngithub guides"
+  },
+  {
+    "objectID": "index.html#thank-you-1",
+    "href": "index.html#thank-you-1",
+    "title": "Introduction to Quarto",
+    "section": "Thank you! 🙏",
+    "text": "Thank you! 🙏"
+  },
+  {
+    "objectID": "index.html#references",
+    "href": "index.html#references",
+    "title": "Introduction to Quarto",
+    "section": "References",
+    "text": "References\n\nSome useful references are (Rey 2009), (Singleton, Spielman, and Brunsdon 2016), (Paciorek 2023), (Cook 2999)\n\n\n\n\n\n\n\nCook, Joshua J. 2999. “An Introduction to Quarto: A Versatile Open-Source Tool for Data Reporting and Visualization.”\n\n\nPaciorek, Christopher. 2023. “An Example Quarto Markdown File.”\n\n\nRey, Sergio J. 2009. “Show Me the Code: Spatial Analysis and Open Source.” Journal of Geographical Systems 11: 191–207.\n\n\nSingleton, Alex David, Seth Spielman, and Chris Brunsdon. 2016. “Establishing a Framework for Open Geographic Information Science.” International Journal of Geographical Information Science 30 (8): 1507–21."
   }
 ]
