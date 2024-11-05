@@ -1,0 +1,114 @@
+---
+title: "densitymaps"
+author: "EricDelmelle"
+date: "2024-11-05"
+output: html_document
+---
+
+### Load libraries
+```{r load libraries, echo = TRUE, cache = TRUE, warning = FALSE}
+library(sf)
+library(tigris)
+library(tidyverse)
+library(scales) # For label formatting
+library(tidycensus)
+library(leaflet) 
+library(units) 
+library(htmlwidgets) 
+
+census_api_key("bd48ccbbe80006071141a76230184957dd248abe", install = TRUE, overwrite=TRUE)
+options(expressions = 50000)
+```
+
+### Load andd simplify counties
+
+-we simplify for faster rendering
+```{r Load and simplify counties, echo = TRUE, cache = TRUE, warning = FALSE}
+pa_counties <- counties(state = "PA", year = 2020, cb = FALSE,progress_bar = FALSE)
+if (is.na(st_crs(pa_counties))) {
+  pa_counties <- st_set_crs(pa_counties, 4269)
+}
+pa_counties <- st_simplify(pa_counties, dTolerance = 0.05)
+```
+
+### Fetch population data, join it back to spatial data
+```{r Fetch population data and join to spatial data, echo = TRUE, cache = TRUE, warning = FALSE}
+pa_population <- get_acs(
+  geography = "county",
+  state = "PA",
+  variables = "B01003_001E",
+  year = 2020,
+  survey = "acs5",
+  output = "wide"
+) %>%
+  rename(population = B01003_001E) %>%
+  select(GEOID, population)
+```
+
+```{r join data, echo = TRUE, cache = TRUE, warning = FALSE}
+pa_data <- pa_counties %>%
+  left_join(pa_population, by = "GEOID") %>%
+  mutate(
+    area_km2 = set_units(st_area(geometry), km^2), # Set area explicitly in km²
+    density = population / as.numeric(area_km2) # Convert area to numeric
+  )
+```
+
+### Make map with ggplot
+- save your map to png that we will ultimately load into our quarto document
+```{r make map, echo = TRUE, cache = TRUE, cache.lazy = FALSE, warning = FALSE}
+plot<- ggplot(data = pa_data) +
+  geom_sf(aes(fill = density), color = "white", lwd = 0.2) +
+  scale_fill_viridis_c(
+    option = "magma",
+    trans = "log",
+    direction = -1,
+    name = "Density (per km²)",
+    labels = label_number(accuracy = 1)
+  ) +
+  labs(
+    title = "Population Density by County in Pennsylvania (2020)",
+    caption = "Data: U.S. Census Bureau"
+  ) +
+  theme_void()
+plot
+# Save the plot as a PNG image
+ggsave("pa_population_density_map.png", plot = plot, width = 8, height = 6, dpi = 300)
+```
+
+### Make interactive map with leaflet
+- we need to save to an html too.
+- we use the htmlwidgets package.
+```{r make interactive map, echo = TRUE, cache = TRUE, cache.lazy = FALSE, warning = FALSE}
+# Define color palette
+color_pal <- colorNumeric(
+  palette = "magma",
+  domain = pa_data$density,
+  reverse = TRUE # To match the direction = -1 in ggplot2
+)
+
+# Create the interactive map
+map <- leaflet(pa_data) %>%
+  addProviderTiles(providers$CartoDB.Positron) %>%
+  addPolygons(
+    fillColor = ~color_pal(density),
+    fillOpacity = 0.7,
+    color = "white",
+    weight = 1,
+    popup = ~paste(
+      "<strong>County:</strong>", NAME, "<br>",
+      "<strong>Density:</strong>", round(density, 1), "per km²"
+    )
+  ) %>%
+  addLegend(
+    pal = color_pal,
+    values = ~density,
+    title = "Density (per km²)",
+    position = "bottomright",
+    labFormat = labelFormat(digits = 0)
+  )
+
+map
+# Save the map to an HTML file
+saveWidget(map, "pa_population_density_map.html", selfcontained = TRUE)
+```
