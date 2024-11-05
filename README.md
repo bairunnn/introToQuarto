@@ -4,7 +4,7 @@
 
 Thank you to Nick Bearman for providing an early version of these slides.
 
-- [**repo**:](https://github.com/ericdelmelle/introToQuarto)
+- [**repo**](https://github.com/ericdelmelle/introToQuarto)
 - [presentation deck](https://ericdelmelle.github.io/introToQuarto)
 - [qmd document the presentation](https://github.com/ericdelmelle/introToQuarto/tree/main/index.qmd)
 - [exercise qmd](https://github.com/ericdelmelle/introToQuarto/tree/main/exercise.qmd)
