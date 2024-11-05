@@ -38,7 +38,7 @@ knitr::opts_chunk$set(fig.retina = 1)
 # Thank You
 
 ::: {.center}
-Special thanks to Nick Bearman for sharing an earlier version of these slides.
+Special thanks to Nick Bearman for sharing an earlier version of these slides!
 
 :::
 
