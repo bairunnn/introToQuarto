@@ -28,6 +28,9 @@ format:
     chalkboard: true
     mutliplex: false
 bibliography: "references.bib"
+editor: 
+  markdown: 
+    wrap: 72
 ---
 
 ```{r setup, include = FALSE}
@@ -37,38 +40,43 @@ knitr::opts_chunk$set(fig.retina = 1)
 
 # Thank You
 
-::: {.center}
-Special thanks to Nick Bearman for sharing an earlier version of these slides!
-
+::: center
+Special thanks to Nick Bearman for sharing an earlier version of these
+slides!
 :::
-
 
 ## Outline & Learning objectives:
 
-::: {.fragment}
-- What is reproducibility and replicability?
-- Why do it & how we do it?
+::: fragment
+-   What is reproducibility and replicability?
+-   Why do it & how we do it?
 :::
 
-::: {.fragment}
-- Understand what reproducibility and replicability are
-- How `quarto` can be used to create documents, web pages, in an effort to increase replicability and reproducibility 
-- create your own presentation
+::: fragment
+-   Understand what reproducibility and replicability are
+-   How `quarto` can be used to create documents, web pages, in an
+    effort to increase replicability and reproducibility
+-   create your own presentation
 :::
 
 ## What is Reproducibility?
-::: {.fragment}
-- Ability for other people *with a similar level of skill* to reproduce your work. 
-- Other **people**:
-  - colleagues in company, 
-  - group members in a project,
-  - yourself in a year when you want to use your project work for something else,
-- Fundamental part of research
-- Also is best practice - which will allow others to reproduce your work. 
+
+::: fragment
+-   Ability for other people *with a similar level of skill* to
+    reproduce your work.
+-   Other **people**:
+    -   colleagues in company,
+    -   group members in a project,
+    -   yourself in a year when you want to use your project work for
+        something else,
+-   Fundamental part of research
+-   Also is best practice - which will allow others to reproduce your
+    work.
 :::
 
 ## Sometimes we get confused into the terminology...
-::: {.fragment}
+
+::: fragment
 *"\[...\] when the same analysis steps performed on the same dataset
 \[...\] produce the same answer."* ([Turing
 Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions))
@@ -78,143 +86,164 @@ Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-
 fig-align="center"}
 :::
 
-
 ## Why we need Reproducibility?
-::: {.fragment}
-- We need to have confidence that our research is good quality and we are doing good science
 
-- Peter Fisher (1993) compared seven different pieces of GIS software doing a viewshed analysis
+::: fragment
+-   We need to have confidence that our research is good quality and we
+    are doing good science
 
-- and got seven (slightly) different results!
+-   Peter Fisher (1993) compared seven different pieces of GIS software
+    doing a viewshed analysis
+
+-   and got seven (slightly) different results!
 :::
-
 
 ![](images/fisher-1993-fig8.png)
 
+## Why do it?
+
+-   Fisher also discovered a major error in one piece of software which
+    gave completely incorrect results.
+
+-   Highlights the need for:
+
+    -   Standards & testing to make sure this doesn't happen
+    -   Algorithms used to be published so people can see what is
+        happening
+    -   Issues when only binary files are available, and not the source
+        code
+
+Fisher, P. F. (1993). Algorithm and implementation uncertainty in
+viewshed analysis. International Journal of Geographical Information
+Systems, 7(4), 331–347. https://doi.org/10.1080/02693799308901965
 
 ## Why do it?
 
-- Fisher also discovered a major error in one piece of software which gave completely incorrect results.
+-   Standards & testing to make sure this doesn't happen
 
-- Highlights the need for:
+-   Algorithms used to be published so people can see what is happening
 
-  - Standards & testing to make sure this doesn't happen
-  - Algorithms used to be published so people can see what is happening
-  - Issues when only binary files are available, and not the source code
+    -   Publish algorithms in journals
+    -   Even more important with machine learning - transparency is
+        important
 
-Fisher, P. F. (1993). Algorithm and implementation uncertainty in viewshed analysis. International Journal of Geographical Information Systems, 7(4), 331–347. https://doi.org/10.1080/02693799308901965
+-   Issues when only binary files are available, and not the source code
 
-
-
-
-## Why do it?
-- Standards & testing to make sure this doesn't happen
-  
-- Algorithms used to be published so people can see what is happening
-  - Publish algorithms in journals
-  - Even more important with machine learning - transparency is important
-  
-- Issues when only binary files are available, and not the source code
-  - Growth in open source software - so you can see (and unpick) what is happening
-
+    -   Growth in open source software - so you can see (and unpick)
+        what is happening
 
 ## Research
-::: {.fragment}
-- Some journals & conferences ask you to submit code along with your paper
 
-- AGILE - https://reproducible-agile.github.io/
+::: fragment
+-   Some journals & conferences ask you to submit code along with your
+    paper
 
-- Anyone (with a similar level of skills) should be able to do reproduce your research and benefit from it. 
+-   AGILE - https://reproducible-agile.github.io/
 
-- One reason for open source tools.
-	
-- If you do analysis in ArcGIS Pro, you need ArcGIS Pro to recreate that analysis. 
-	
-- If you don't have ArcGIS Pro, what do you do?
+-   Anyone (with a similar level of skills) should be able to do
+    reproduce your research and benefit from it.
+
+-   One reason for open source tools.
+
+-   If you do analysis in ArcGIS Pro, you need ArcGIS Pro to recreate
+    that analysis.
+
+-   If you don't have ArcGIS Pro, what do you do?
 :::
-
 
 ## How do we do this?
-::: {.fragment}
-- Documenting what you did is standard - Methods
 
-- If you can do what you did in a script, then you can also share this
+::: fragment
+-   Documenting what you did is standard - Methods
 
-- ArcGIS Pro / QGIS
-  - graphical interface, click buttons, etc
-  
-- R / Python
-  - write out the script
+-   If you can do what you did in a script, then you can also share this
+
+-   ArcGIS Pro / QGIS
+
+    -   graphical interface, click buttons, etc
+
+-   R / Python
+
+    -   write out the script
 :::
-
 
 ## Setup - "environments"
-::: {.fragment}
-- To replicate a piece of work, you need to know what software they used
 
-- What version?
+::: fragment
+-   To replicate a piece of work, you need to know what software they
+    used
 
-- Which libraries / packages?
+-   What version?
 
-- What version of libraries or packages?
-:::  
+-   Which libraries / packages?
 
-
-## Writing, Presentations
-::: {.fragment}
-Also works for writing and presentations as well.
-
-- Markdown allows you to write plain text with tags - stars, hashes, etc.
-
-- Can also do analysis in this
-
-- LaTeX is a developed version of Markdown (or Markdown is a simple version of LaTeX)
-
-- RMarkdown allows you to run R code
-
-- Quarto allows you to run other code (Python, R, etc.)
-
-- This presentation is written in Quarto  :smile:
+-   What version of libraries or packages?
 :::
 
+## Writing, Presentations
+
+::: fragment
+Also works for writing and presentations as well.
+
+-   Markdown allows you to write plain text with tags - stars, hashes,
+    etc.
+
+-   Can also do analysis in this
+
+-   LaTeX is a developed version of Markdown (or Markdown is a simple
+    version of LaTeX)
+
+-   RMarkdown allows you to run R code
+
+-   Quarto allows you to run other code (Python, R, etc.)
+
+-   This presentation is written in Quarto :smile:
+:::
 
 ## Let's dive into Quarto
+
 -   [Quarto](https://quarto.org/) is a new, open-source, scientific and
     technical publishing system
--  Combine text and code to produce formatted documents
--   Publish reproducible and dynamic presentations, dashboards, websites, blogs, and books
-    in HTML, PDF, MS Word, etc.
+-   Combine text and code to produce formatted documents
+-   Publish reproducible and dynamic presentations, dashboards,
+    websites, blogs, and books in HTML, PDF, MS Word, etc.
 -   Multi-language support for R, Python, Julia, and more
 -   Quarto extends [RMarkdown](https://rmarkdown.rstudio.com/) and
     shares similarities with [Juypter Notebooks](https://jupyter.org/).
 
-![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2ef45f1-4a68-4c7a-a43f-bdcf0f90e104_rw_3840.png?h=783eba914284e5adfb9feadcf4ba5f1e){width=70%}
-
+![[Artwork from "Hello, Quarto" keynote by Julia Lowndes and Mine
+Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by
+Allison
+Horst.](https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote)](https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2ef45f1-4a68-4c7a-a43f-bdcf0f90e104_rw_3840.png?h=783eba914284e5adfb9feadcf4ba5f1e){width="70%"}
 
 ## Formats
 
-- **Documents**: HTML, PDF, MS Word, Open Office, ePub
-- **Presentations**: Revealjs, PowerPoint, 
-- **Wikis**: MediaWiki, JiraWiki, ...
-- Many templates exist for academic documents: [quarto-journals](https://github.com/quarto-journals/)
-- And much more: Jupyter, RTF, InDesign, ...
-
+-   **Documents**: HTML, PDF, MS Word, Open Office, ePub
+-   **Presentations**: Revealjs, PowerPoint,
+-   **Wikis**: MediaWiki, JiraWiki, ...
+-   Many templates exist for academic documents:
+    [quarto-journals](https://github.com/quarto-journals/)
+-   And much more: Jupyter, RTF, InDesign, ...
 
 ## How does Quarto work?
-![taken from [What is Quarto - A Quick Intro FAQ](https://github.com/jansim/tea-talk-quarto/tree/main)](images/quarto.png){width=70%}
+
+![taken from [What is Quarto - A Quick Intro
+FAQ](https://github.com/jansim/tea-talk-quarto/tree/main)](images/quarto.png){width="70%"}
 
 ## .qmd
 
-![[qmd file](https://quarto.org/docs/get-started/hello/rstudio.html)](images/rstudio-hello.png)
+![[qmd
+file](https://quarto.org/docs/get-started/hello/rstudio.html)](images/rstudio-hello.png)
 
 ## .ipynb
 
-![[jupyter notebook](https://quarto.org/docs/get-started/hello/jupyter.html)](images/jupyter-quarto-preview.png)
-
-
+![[jupyter
+notebook](https://quarto.org/docs/get-started/hello/jupyter.html)](images/jupyter-quarto-preview.png)
 
 ## How does Quarto handle code chunks?
-- example with the iris dataset (flowers)
+
+-   example with the iris dataset (flowers)
+
 ```{r, echo = TRUE}
 data(iris)
 
@@ -226,10 +255,9 @@ plot(iris$Sepal.Length, iris$Sepal.Width,
 
 ```
 
-
 ## Plots
 
-````{.markdown}
+```` markdown
 ```{{r}}
 #| label: "iris-plot"
 #| echo: TRUE
@@ -245,12 +273,12 @@ plot(iris$Sepal.Length, iris$Sepal.Width,
      pch = 16, col = iris$Species)
 
 ```
-
 ````
-defaults to *knitr* engine (you can override the engine with `engine: jupyter`)
 
+defaults to *knitr* engine (you can override the engine with
+`engine: jupyter`)
 
-````{.markdown}
+```` markdown
 ```{{python}}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
@@ -271,7 +299,9 @@ plt.show()
 ````
 
 ## Air Quality
-@fig-airquality further explores the impact of temperature on ozone level.
+
+@fig-airquality further explores the impact of temperature on ozone
+level.
 
 ```{r}
 #| label: fig-airquality
@@ -285,92 +315,88 @@ ggplot(airquality, aes(Temp, Ozone)) +
   geom_smooth(method = "loess")
 ```
 
-
 ## Population density map in PA, 2010
-- code was run in a markdown, and image saved
+
+-   code was run in a markdown, and image saved
+
 ```{r, echo=FALSE, out.width = '70%'}
 knitr::include_graphics("images/pa_population_density_map.png")
 ```
 
 ## Population density map in PA, 2010 (interactive)
-<iframe src="images/pa_population_density_map.html" width="75%" height="500px"></iframe>
 
+<iframe src="images/pa_population_density_map.html" width="75%" height="500px">
+
+</iframe>
 
 # When to use Quarto? {background-opacity="0.7" background-image="images/dalle3/scale.jpeg"}
 
-##  Strengths & Weaknesses of Quarto *for slides*
+## Strengths & Weaknesses of Quarto *for slides*
 
-:::: {.columns}
+::: columns
+**Strengths** :muscle:
 
+-   Consistency in Output
+    -   Focus on content
+-   Support for (Explicit) Version Control (e.g. git)
+-   Great for Code (in Slides)
+-   Automation / Generated Contents
+-   Interactivity
 
+**Weaknesses** :cry:
 
-**Strengths** 💪
-
-- Consistency in Output
-  - Focus on content
-- Support for (Explicit) Version Control (e.g. git)
-- Great for Code (in Slides)
-- Automation / Generated Contents
-- Interactivity
-
-
-**Weaknesses** 😢
-
-- Harder to do fine layouting
-  - No WYSIWYG
-- New Syntax to learn
-- Software Maturity
-
-
-::::
+-   Harder to do fine layouting
+    -   No WYSIWYG
+-   New Syntax to learn
+-   Software Maturity
+:::
 
 ## Key Benefit: (Explicit) Version Control {{< fa code-compare >}}
 
-:::: {.columns}
-
+::::: columns
 ::: {.column width="50%"}
-![[by Scriberia for The Turing Way community (CC-BY 4.0)](https://zenodo.org/record/3695300/files/VersionControl.jpg?download=1)](images/turingway/VersionControl.jpg){width=80% fig-align="center"}
+![[by Scriberia for The Turing Way community (CC-BY
+4.0)](https://zenodo.org/record/3695300/files/VersionControl.jpg?download=1)](images/turingway/VersionControl.jpg){width="80%"
+fig-align="center"}
 :::
 
 ::: {.column .fragment width="50%"}
-
-- Going back through time
-- Great for collaboration
-- Allow sharing and adaptation
-  - Just like [this presentation](https://github.com/nickbearman/reproducibility-replicability-gds-penn)
-- Allows automation
-
+-   Going back through time
+-   Great for collaboration
+-   Allow sharing and adaptation
+    -   Just like [this
+        presentation](https://github.com/nickbearman/reproducibility-replicability-gds-penn)
+-   Allows automation
 :::
-
-::::
-
+:::::
 
 ### Practice what you preach!
 
-By setting up your teaching materials in a reproducible manner, you demonstrate the value of reproducibility directly
+By setting up your teaching materials in a reproducible manner, you
+demonstrate the value of reproducibility directly
 
-- Useful for others
-- Useful for future you when you teach this course again
-
+-   Useful for others
+-   Useful for future you when you teach this course again
 
 ## Additional Resources
 
-- [The Turing Way handbook to reproducible, ethical and collaborative data science](https://the-turing-way.netlify.app)
-- Richard McElreath (2020). [Science as amateur software development](https://www.youtube.com/watch?v=zwRdO9_GGhY). YouTube
-- Quarto
-  - [Quarto Documentation](https://quarto.org/docs/guide/)
-  - [Quarto for Academics](https://quarto.org/docs/blog/posts/2023-05-22-quarto-for-academics/) by Mine Çetinkaya-Rundel
-- Version Control
-  - [Version Control Book](https://lennartwittkuhn.com/version-control-book)
-  - [github guides](https://github.com/git-guides)
+-   [The Turing Way handbook to reproducible, ethical and collaborative
+    data science](https://the-turing-way.netlify.app)
+-   Richard McElreath (2020). [Science as amateur software
+    development](https://www.youtube.com/watch?v=zwRdO9_GGhY). YouTube
+-   Quarto
+    -   [Quarto Documentation](https://quarto.org/docs/guide/)
+    -   [Quarto for
+        Academics](https://quarto.org/docs/blog/posts/2023-05-22-quarto-for-academics/)
+        by Mine Çetinkaya-Rundel
+-   Version Control
+    -   [Version Control
+        Book](https://lennartwittkuhn.com/version-control-book)
+    -   [github guides](https://github.com/git-guides)
 
 ## Thank you! :pray:
 
 ## References
-- Some useful references are [@Rey], [@Singleton], [@Paciorek], [@Cook]
-	
 
-
-
-
-
+-   Some useful references are [@Rey], [@Singleton], [@Paciorek],
+    [@Cook]

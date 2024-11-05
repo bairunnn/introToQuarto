@@ -1,0 +1,52 @@
+---
+title: "In-class example"
+authors:
+  - id: byron
+    name:
+      given: Byron
+      family: Huang
+      literal: Byron Huang
+    attributes:
+      corresponding: boolean
+      equal-contributor: true
+date: "2024-11-05"
+date-format: long
+from: markdown+emoji
+format:
+  revealjs:
+    theme: [default, custom.scss]
+    preview-links: auto
+    transition: none
+    transition-speed: fast
+    slide-number: "c/t"
+    link-external-newwindow: true
+    overview: true
+    menu: true
+    chalkboard: true
+    mutliplex: false
+bibliography: "references.bib"
+editor: 
+  markdown: 
+    wrap: 72
+---
+
+# Objectives
+::: fragment
+-   use this template to create your presentation
+
+-   add the following elements:
+
+    -   a title, subtitle, authors
+    -   an introduction slide
+    -   a figure of your choosing
+
+    ```{r, echo = TRUE}
+    knitr::include_graphics("images/pa_population_density_map.png")
+    ```
+:::
+
+## Objectives2
+
+-   add an interactive map using leaflet <iframe src="images/pa_population_density_map.html" width="75%" height="500px"></iframe>
+-   add some references via a .bib file
+-   push it on github

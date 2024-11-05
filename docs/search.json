@@ -354,7 +354,7 @@
     "href": "index.html#air-quality",
     "title": "Introduction to Quarto",
     "section": "Air Quality",
-    "text": "Air Quality\nFigure 1 further explores the impact of temperature on ozone level.\n\nFigure 1: Temperature and ozone level."
+    "text": "Air Quality\nFigure 1 further explores the impact of temperature on ozone level.\n\n\nFigure 1: Temperature and ozone level."
   },
   {
     "objectID": "index.html#population-density-map-in-pa-2010",
@@ -403,7 +403,7 @@
     "href": "index.html#references",
     "title": "Introduction to Quarto",
     "section": "References",
-    "text": "References\n\nSome useful references are (Rey 2009), (Singleton, Spielman, and Brunsdon 2016), (Paciorek 2023), (Cook 2999)\n\n\n\n\n\n\n\nCook, Joshua J. 2999. “An Introduction to Quarto: A Versatile Open-Source Tool for Data Reporting and Visualization.”\n\n\nPaciorek, Christopher. 2023. “An Example Quarto Markdown File.”\n\n\nRey, Sergio J. 2009. “Show Me the Code: Spatial Analysis and Open Source.” Journal of Geographical Systems 11: 191–207.\n\n\nSingleton, Alex David, Seth Spielman, and Chris Brunsdon. 2016. “Establishing a Framework for Open Geographic Information Science.” International Journal of Geographical Information Science 30 (8): 1507–21."
+    "text": "References\n\nSome useful references are (Rey 2009), (Singleton, Spielman, and Brunsdon 2016), (Paciorek 2023), (Cook 2999)\n\n\n\n\n\n\n\n\n\nCook, Joshua J. 2999. “An Introduction to Quarto: A Versatile Open-Source Tool for Data Reporting and Visualization.”\n\n\nPaciorek, Christopher. 2023. “An Example Quarto Markdown File.”\n\n\nRey, Sergio J. 2009. “Show Me the Code: Spatial Analysis and Open Source.” Journal of Geographical Systems 11: 191–207.\n\n\nSingleton, Alex David, Seth Spielman, and Chris Brunsdon. 2016. “Establishing a Framework for Open Geographic Information Science.” International Journal of Geographical Information Science 30 (8): 1507–21."
   },
   {
     "objectID": "index.html#qmd",
@@ -418,5 +418,33 @@
     "title": "Introduction to Quarto",
     "section": ".ipynb",
     "text": ".ipynb\n\njupyter notebook"
+  },
+  {
+    "objectID": "index.html#key-benefit-explicit-version-control",
+    "href": "index.html#key-benefit-explicit-version-control",
+    "title": "Introduction to Quarto",
+    "section": "Key Benefit: (Explicit) Version Control ",
+    "text": "Key Benefit: (Explicit) Version Control \n\n\n\n\n\nby Scriberia for The Turing Way community (CC-BY 4.0)\n\n\n\n\nGoing back through time\nGreat for collaboration\nAllow sharing and adaptation\n\nJust like this presentation\n\nAllows automation\n\n\nPractice what you preach!\nBy setting up your teaching materials in a reproducible manner, you demonstrate the value of reproducibility directly\n\nUseful for others\nUseful for future you when you teach this course again"
+  },
+  {
+    "objectID": "exercise_byron.html#objectives",
+    "href": "exercise_byron.html#objectives",
+    "title": "Exercise for class",
+    "section": "Objectives",
+    "text": "Objectives\n\nuse this template to create your presentation\nadd the following elements:\n\na title, subtitle, authors\nan introduction slide\na figure of your choosing\n\n\n\nknitr::include_graphics(\"images/pa_population_density_map.png\")"
+  },
+  {
+    "objectID": "exercise_byron.html#objectives-1",
+    "href": "exercise_byron.html#objectives-1",
+    "title": "Exercise for class",
+    "section": "Objectives",
+    "text": "Objectives\n\nadd an interactive map using leaflet \nadd some references via a .bib file\npush it on github"
+  },
+  {
+    "objectID": "exercise_byron.html#objectives2",
+    "href": "exercise_byron.html#objectives2",
+    "title": "In-class example",
+    "section": "Objectives2",
+    "text": "Objectives2\n\nadd an interactive map using leaflet \nadd some references via a .bib file\npush it on github"
   }
 ]

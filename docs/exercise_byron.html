@@ -7,13 +7,11 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.5.57">
 
   <meta name="dcterms.date" content="2024-11-05">
-  <title>Introduction to Quarto</title>
+  <title>In-class example</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -96,27 +94,7 @@
     code span.va { color: #111111; } /* Variable */
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
-    /* CSS for citations */
-    div.csl-bib-body { }
-    div.csl-entry {
-      clear: both;
-      margin-bottom: 0em;
-    }
-    .hanging-indent div.csl-entry {
-      margin-left:2em;
-      text-indent:-2em;
-    }
-    div.csl-left-margin {
-      min-width:2em;
-      float:left;
-    }
-    div.csl-right-inline {
-      margin-left:2em;
-      padding-left:1em;
-    }
-    div.csl-indent {
-      margin-left: 2em;
-    }  </style>
+  </style>
   <link rel="stylesheet" href="site_libs/revealjs/dist/theme/quarto.css">
   <link href="site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -415,15 +393,12 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Introduction to Quarto</h1>
+  <h1 class="title">In-class example</h1>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
 <div class="quarto-title-author-name">
-<a href="https://github.com/ericdelmelle">Eric Delmelle</a> <a href="https://orcid.org/0000-0002-5117-2238" class="quarto-title-author-orcid"> <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA2ZpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDo1N0NEMjA4MDI1MjA2ODExOTk0QzkzNTEzRjZEQTg1NyIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDozM0NDOEJGNEZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDozM0NDOEJGM0ZGNTcxMUUxODdBOEVCODg2RjdCQ0QwOSIgeG1wOkNyZWF0b3JUb29sPSJBZG9iZSBQaG90b3Nob3AgQ1M1IE1hY2ludG9zaCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkZDN0YxMTc0MDcyMDY4MTE5NUZFRDc5MUM2MUUwNEREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjU3Q0QyMDgwMjUyMDY4MTE5OTRDOTM1MTNGNkRBODU3Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+84NovQAAAR1JREFUeNpiZEADy85ZJgCpeCB2QJM6AMQLo4yOL0AWZETSqACk1gOxAQN+cAGIA4EGPQBxmJA0nwdpjjQ8xqArmczw5tMHXAaALDgP1QMxAGqzAAPxQACqh4ER6uf5MBlkm0X4EGayMfMw/Pr7Bd2gRBZogMFBrv01hisv5jLsv9nLAPIOMnjy8RDDyYctyAbFM2EJbRQw+aAWw/LzVgx7b+cwCHKqMhjJFCBLOzAR6+lXX84xnHjYyqAo5IUizkRCwIENQQckGSDGY4TVgAPEaraQr2a4/24bSuoExcJCfAEJihXkWDj3ZAKy9EJGaEo8T0QSxkjSwORsCAuDQCD+QILmD1A9kECEZgxDaEZhICIzGcIyEyOl2RkgwAAhkmC+eAm0TAAAAABJRU5ErkJggg=="></a>
-</div>
-<div class="quarto-title-author-email">
-<a href="mailto:delmelle@gmail.com">delmelle@gmail.com</a>
+Byron Huang 
 </div>
 </div>
 </div>
@@ -431,352 +406,41 @@
   <p class="date">November 5, 2024</p>
 </section>
 <section>
-<section id="thank-you" class="title-slide slide level1 center">
-<h1>Thank You</h1>
-<div class="center">
-<p>Special thanks to Nick Bearman for sharing an earlier version of these slides!</p>
-</div>
-</section>
-<section id="outline-learning-objectives" class="slide level2">
-<h2>Outline &amp; Learning objectives:</h2>
+<section id="objectives" class="title-slide slide level1 center">
+<h1>Objectives</h1>
 <div class="fragment">
 <ul>
-<li>What is reproducibility and replicability?</li>
-<li>Why do it &amp; how we do it?</li>
-</ul>
-</div>
-<div class="fragment">
+<li><p>use this template to create your presentation</p></li>
+<li><p>add the following elements:</p>
 <ul>
-<li>Understand what reproducibility and replicability are</li>
-<li>How <code>quarto</code> can be used to create documents, web pages, in an effort to increase replicability and reproducibility</li>
-<li>create your own presentation</li>
-</ul>
-</div>
-</section>
-<section id="what-is-reproducibility" class="slide level2">
-<h2>What is Reproducibility?</h2>
-<div class="fragment">
-<ul>
-<li>Ability for other people <em>with a similar level of skill</em> to reproduce your work.</li>
-<li>Other <strong>people</strong>:
-<ul>
-<li>colleagues in company,</li>
-<li>group members in a project,</li>
-<li>yourself in a year when you want to use your project work for something else,</li>
-</ul></li>
-<li>Fundamental part of research</li>
-<li>Also is best practice - which will allow others to reproduce your work.</li>
-</ul>
-</div>
-</section>
-<section id="sometimes-we-get-confused-into-the-terminology" class="slide level2">
-<h2>Sometimes we get confused into the terminology…</h2>
-<div class="fragment">
-<p><em>“[…] when the same analysis steps performed on the same dataset […] produce the same answer.”</em> (<a href="https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions">Turing Way</a>)</p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="https://zenodo.org/record/3678226/files/ReproducibleDefinitionGrid.jpg?download=1" style="width:60.0%"></p>
-<figcaption><a href="https://zenodo.org/record/3678226/files/ReproducibleDefinitionGrid.jpg?download=1">by Scriberia for The Turing Way community (CC-BY 4.0)</a></figcaption>
-</figure>
-</div>
-</div>
-</section>
-<section id="why-we-need-reproducibility" class="slide level2">
-<h2>Why we need Reproducibility?</h2>
-<div class="fragment">
-<ul>
-<li><p>We need to have confidence that our research is good quality and we are doing good science</p></li>
-<li><p>Peter Fisher (1993) compared seven different pieces of GIS software doing a viewshed analysis</p></li>
-<li><p>and got seven (slightly) different results!</p></li>
-</ul>
-</div>
-
-<img data-src="images/fisher-1993-fig8.png" class="r-stretch"></section>
-<section id="why-do-it" class="slide level2">
-<h2>Why do it?</h2>
-<ul>
-<li><p>Fisher also discovered a major error in one piece of software which gave completely incorrect results.</p></li>
-<li><p>Highlights the need for:</p>
-<ul>
-<li>Standards &amp; testing to make sure this doesn’t happen</li>
-<li>Algorithms used to be published so people can see what is happening</li>
-<li>Issues when only binary files are available, and not the source code</li>
-</ul></li>
-</ul>
-<p>Fisher, P. F. (1993). Algorithm and implementation uncertainty in viewshed analysis. International Journal of Geographical Information Systems, 7(4), 331–347. https://doi.org/10.1080/02693799308901965</p>
-</section>
-<section id="why-do-it-1" class="slide level2">
-<h2>Why do it?</h2>
-<ul>
-<li><p>Standards &amp; testing to make sure this doesn’t happen</p></li>
-<li><p>Algorithms used to be published so people can see what is happening</p>
-<ul>
-<li>Publish algorithms in journals</li>
-<li>Even more important with machine learning - transparency is important</li>
-</ul></li>
-<li><p>Issues when only binary files are available, and not the source code</p>
-<ul>
-<li>Growth in open source software - so you can see (and unpick) what is happening</li>
-</ul></li>
-</ul>
-</section>
-<section id="research" class="slide level2">
-<h2>Research</h2>
-<div class="fragment">
-<ul>
-<li><p>Some journals &amp; conferences ask you to submit code along with your paper</p></li>
-<li><p>AGILE - https://reproducible-agile.github.io/</p></li>
-<li><p>Anyone (with a similar level of skills) should be able to do reproduce your research and benefit from it.</p></li>
-<li><p>One reason for open source tools.</p></li>
-<li><p>If you do analysis in ArcGIS Pro, you need ArcGIS Pro to recreate that analysis.</p></li>
-<li><p>If you don’t have ArcGIS Pro, what do you do?</p></li>
-</ul>
-</div>
-</section>
-<section id="how-do-we-do-this" class="slide level2">
-<h2>How do we do this?</h2>
-<div class="fragment">
-<ul>
-<li><p>Documenting what you did is standard - Methods</p></li>
-<li><p>If you can do what you did in a script, then you can also share this</p></li>
-<li><p>ArcGIS Pro / QGIS</p>
-<ul>
-<li>graphical interface, click buttons, etc</li>
-</ul></li>
-<li><p>R / Python</p>
-<ul>
-<li>write out the script</li>
-</ul></li>
-</ul>
-</div>
-</section>
-<section id="setup---environments" class="slide level2">
-<h2>Setup - “environments”</h2>
-<div class="fragment">
-<ul>
-<li><p>To replicate a piece of work, you need to know what software they used</p></li>
-<li><p>What version?</p></li>
-<li><p>Which libraries / packages?</p></li>
-<li><p>What version of libraries or packages?</p></li>
-</ul>
-</div>
-</section>
-<section id="writing-presentations" class="slide level2">
-<h2>Writing, Presentations</h2>
-<div class="fragment">
-<p>Also works for writing and presentations as well.</p>
-<ul>
-<li><p>Markdown allows you to write plain text with tags - stars, hashes, etc.</p></li>
-<li><p>Can also do analysis in this</p></li>
-<li><p>LaTeX is a developed version of Markdown (or Markdown is a simple version of LaTeX)</p></li>
-<li><p>RMarkdown allows you to run R code</p></li>
-<li><p>Quarto allows you to run other code (Python, R, etc.)</p></li>
-<li><p>This presentation is written in Quarto <span class="emoji" data-emoji="smile">😄</span></p></li>
-</ul>
-</div>
-</section>
-<section id="lets-dive-into-quarto" class="slide level2">
-<h2>Let’s dive into Quarto</h2>
-<ul>
-<li><a href="https://quarto.org/">Quarto</a> is a new, open-source, scientific and technical publishing system</li>
-<li>Combine text and code to produce formatted documents</li>
-<li>Publish reproducible and dynamic presentations, dashboards, websites, blogs, and books in HTML, PDF, MS Word, etc.</li>
-<li>Multi-language support for R, Python, Julia, and more</li>
-<li>Quarto extends <a href="https://rmarkdown.rstudio.com/">RMarkdown</a> and shares similarities with <a href="https://jupyter.org/">Juypter Notebooks</a>.</li>
-</ul>
-
-<img data-src="https://cdn.myportfolio.com/45214904-6a61-4e23-98d6-b140f8654a40/c2ef45f1-4a68-4c7a-a43f-bdcf0f90e104_rw_3840.png?h=783eba914284e5adfb9feadcf4ba5f1e" style="width:70.0%" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://allisonhorst.com/cetinkaya-rundel-lowndes-quarto-keynote">Artwork from “Hello, Quarto” keynote by Julia Lowndes and Mine Çetinkaya-Rundel, presented at RStudio Conference 2022. Illustrated by Allison Horst.</a></p></section>
-<section id="formats" class="slide level2">
-<h2>Formats</h2>
-<ul>
-<li><strong>Documents</strong>: HTML, PDF, MS Word, Open Office, ePub</li>
-<li><strong>Presentations</strong>: Revealjs, PowerPoint,</li>
-<li><strong>Wikis</strong>: MediaWiki, JiraWiki, …</li>
-<li>Many templates exist for academic documents: <a href="https://github.com/quarto-journals/">quarto-journals</a></li>
-<li>And much more: Jupyter, RTF, InDesign, …</li>
-</ul>
-</section>
-<section id="how-does-quarto-work" class="slide level2">
-<h2>How does Quarto work?</h2>
-
-<img data-src="images/quarto.png" style="width:70.0%" class="r-stretch quarto-figure-center"><p class="caption">taken from <a href="https://github.com/jansim/tea-talk-quarto/tree/main">What is Quarto - A Quick Intro FAQ</a></p></section>
-<section id="qmd" class="slide level2">
-<h2>.qmd</h2>
-
-<img data-src="images/rstudio-hello.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://quarto.org/docs/get-started/hello/rstudio.html">qmd file</a></p></section>
-<section id="ipynb" class="slide level2">
-<h2>.ipynb</h2>
-
-<img data-src="images/jupyter-quarto-preview.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://quarto.org/docs/get-started/hello/jupyter.html">jupyter notebook</a></p></section>
-<section id="how-does-quarto-handle-code-chunks" class="slide level2">
-<h2>How does Quarto handle code chunks?</h2>
-<ul>
-<li>example with the iris dataset (flowers)</li>
+<li>a title, subtitle, authors</li>
+<li>an introduction slide</li>
+<li>a figure of your choosing</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">data</span>(iris)</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a><span class="fu">plot</span>(iris<span class="sc">$</span>Sepal.Length, iris<span class="sc">$</span>Sepal.Width, </span>
-<span id="cb1-4"><a></a>     <span class="at">main =</span> <span class="st">"Scatter Plot of Sepal Length vs Sepal Width"</span>,</span>
-<span id="cb1-5"><a></a>     <span class="at">xlab =</span> <span class="st">"Sepal Length (cm)"</span>,</span>
-<span id="cb1-6"><a></a>     <span class="at">ylab =</span> <span class="st">"Sepal Width (cm)"</span>,</span>
-<span id="cb1-7"><a></a>     <span class="at">pch =</span> <span class="dv">16</span>, <span class="at">col =</span> iris<span class="sc">$</span>Species)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-
-</div>
-<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" class="r-stretch"></section>
-<section id="plots" class="slide level2">
-<h2>Plots</h2>
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb2-1"><a></a><span class="in">```{r}</span></span>
-<span id="cb2-2"><a></a><span class="in">#| label: "iris-plot"</span></span>
-<span id="cb2-3"><a></a><span class="in">#| echo: TRUE</span></span>
-<span id="cb2-4"><a></a><span class="in">#| fig-format: svg</span></span>
-<span id="cb2-5"><a></a><span class="in">#| cache: TRUEs</span></span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a><span class="in">data(iris)</span></span>
-<span id="cb2-8"><a></a></span>
-<span id="cb2-9"><a></a><span class="in">plot(iris$Sepal.Length, iris$Sepal.Width, </span></span>
-<span id="cb2-10"><a></a><span class="in">     main = "Scatter Plot of Sepal Length vs Sepal Width",</span></span>
-<span id="cb2-11"><a></a><span class="in">     xlab = "Sepal Length (cm)",</span></span>
-<span id="cb2-12"><a></a><span class="in">     ylab = "Sepal Width (cm)",</span></span>
-<span id="cb2-13"><a></a><span class="in">     pch = 16, col = iris$Species)</span></span>
-<span id="cb2-14"><a></a></span>
-<span id="cb2-15"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>defaults to <em>knitr</em> engine (you can override the engine with <code>engine: jupyter</code>)</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource markdown number-lines code-with-copy"><code class="sourceCode markdown"><span id="cb3-1"><a></a><span class="in">```{python}</span></span>
-<span id="cb3-2"><a></a><span class="in">#| label: fig-polar</span></span>
-<span id="cb3-3"><a></a><span class="in">#| fig-cap: "A line plot on a polar axis"</span></span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a><span class="in">import numpy as np</span></span>
-<span id="cb3-6"><a></a><span class="in">import matplotlib.pyplot as plt</span></span>
-<span id="cb3-7"><a></a></span>
-<span id="cb3-8"><a></a><span class="in">r = np.arange(0, 2, 0.01)</span></span>
-<span id="cb3-9"><a></a><span class="in">theta = 2 * np.pi * r</span></span>
-<span id="cb3-10"><a></a><span class="in">fig, ax = plt.subplots(</span></span>
-<span id="cb3-11"><a></a><span class="in">  subplot_kw = {'projection': 'polar'} </span></span>
-<span id="cb3-12"><a></a><span class="in">)</span></span>
-<span id="cb3-13"><a></a><span class="in">ax.plot(theta, r)</span></span>
-<span id="cb3-14"><a></a><span class="in">ax.set_rticks([0.5, 1, 1.5, 2])</span></span>
-<span id="cb3-15"><a></a><span class="in">ax.grid(True)</span></span>
-<span id="cb3-16"><a></a><span class="in">plt.show()</span></span>
-<span id="cb3-17"><a></a><span class="in">```</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="air-quality" class="slide level2">
-<h2>Air Quality</h2>
-<p><a href="#/fig-airquality" class="quarto-xref">Figure&nbsp;1</a> further explores the impact of temperature on ozone level.</p>
-
-<img data-src="index_files/figure-revealjs/fig-airquality-1.png" class="r-stretch quarto-figure-center"><p class="caption">
-Figure&nbsp;1: Temperature and ozone level.
-</p></section>
-<section id="population-density-map-in-pa-2010" class="slide level2">
-<h2>Population density map in PA, 2010</h2>
-<ul>
-<li>code was run in a markdown, and image saved</li>
-</ul>
-
-<img data-src="images/pa_population_density_map.png" style="width:70.0%" class="r-stretch"></section>
-<section id="population-density-map-in-pa-2010-interactive" class="slide level2">
-<h2>Population density map in PA, 2010 (interactive)</h2>
-<iframe src="images/pa_population_density_map.html" width="75%" height="500px">
-</iframe>
-</section></section>
-<section>
-<section id="when-to-use-quarto" class="title-slide slide level1 center" data-background-opacity="0.7" data-background-image="images/dalle3/scale.jpeg">
-<h1>When to use Quarto?</h1>
-
-</section>
-<section id="strengths-weaknesses-of-quarto-for-slides" class="slide level2">
-<h2>Strengths &amp; Weaknesses of Quarto <em>for slides</em></h2>
-<div class="columns">
-<p><strong>Strengths</strong> <span class="emoji" data-emoji="muscle">💪</span></p><ul>
-<li>Consistency in Output
-<ul>
-<li>Focus on content</li>
-</ul></li>
-<li>Support for (Explicit) Version Control (e.g.&nbsp;git)</li>
-<li>Great for Code (in Slides)</li>
-<li>Automation / Generated Contents</li>
-<li>Interactivity</li>
-</ul><p><strong>Weaknesses</strong> <span class="emoji" data-emoji="cry">😢</span></p><ul>
-<li>Harder to do fine layouting
-<ul>
-<li>No WYSIWYG</li>
-</ul></li>
-<li>New Syntax to learn</li>
-<li>Software Maturity</li>
-</ul>
-</div>
-</section>
-<section id="key-benefit-explicit-version-control" class="slide level2">
-<h2>Key Benefit: (Explicit) Version Control <i class="fa-solid fa-code-compare" aria-label="code-compare"></i></h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>knitr<span class="sc">::</span><span class="fu">include_graphics</span>(<span class="st">"images/pa_population_density_map.png"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
 <figure>
-<p><img data-src="images/turingway/VersionControl.jpg" style="width:80.0%"></p>
-<figcaption><a href="https://zenodo.org/record/3695300/files/VersionControl.jpg?download=1">by Scriberia for The Turing Way community (CC-BY 4.0)</a></figcaption>
+<p><img data-src="images/pa_population_density_map.png" width="1200"></p>
 </figure>
 </div>
-</div><div class="column fragment" style="width:50%;">
-<ul>
-<li>Going back through time</li>
-<li>Great for collaboration</li>
-<li>Allow sharing and adaptation
-<ul>
-<li>Just like <a href="https://github.com/nickbearman/reproducibility-replicability-gds-penn">this presentation</a></li>
-</ul></li>
-<li>Allows automation</li>
+</div>
+</div></li>
 </ul>
-</div></div>
-<h3 id="practice-what-you-preach">Practice what you preach!</h3>
-<p>By setting up your teaching materials in a reproducible manner, you demonstrate the value of reproducibility directly</p>
-<ul>
-<li>Useful for others</li>
-<li>Useful for future you when you teach this course again</li>
-</ul>
+</div>
 </section>
-<section id="additional-resources" class="slide level2">
-<h2>Additional Resources</h2>
+<section id="objectives2" class="slide level2">
+<h2>Objectives2</h2>
 <ul>
-<li><a href="https://the-turing-way.netlify.app">The Turing Way handbook to reproducible, ethical and collaborative data science</a></li>
-<li>Richard McElreath (2020). <a href="https://www.youtube.com/watch?v=zwRdO9_GGhY">Science as amateur software development</a>. YouTube</li>
-<li>Quarto
-<ul>
-<li><a href="https://quarto.org/docs/guide/">Quarto Documentation</a></li>
-<li><a href="https://quarto.org/docs/blog/posts/2023-05-22-quarto-for-academics/">Quarto for Academics</a> by Mine Çetinkaya-Rundel</li>
-</ul></li>
-<li>Version Control
-<ul>
-<li><a href="https://lennartwittkuhn.com/version-control-book">Version Control Book</a></li>
-<li><a href="https://github.com/git-guides">github guides</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="thank-you-1" class="slide level2">
-<h2>Thank you! <span class="emoji" data-emoji="pray">🙏</span></h2>
-</section>
-<section id="references" class="slide level2 smaller scrollable">
-<h2>References</h2>
-<ul>
-<li>Some useful references are <span class="citation" data-cites="Rey">(<a href="#/references" role="doc-biblioref" onclick="">Rey 2009</a>)</span>, <span class="citation" data-cites="Singleton">(<a href="#/references" role="doc-biblioref" onclick="">Singleton, Spielman, and Brunsdon 2016</a>)</span>, <span class="citation" data-cites="Paciorek">(<a href="#/references" role="doc-biblioref" onclick="">Paciorek 2023</a>)</span>, <span class="citation" data-cites="Cook">(<a href="#/references" role="doc-biblioref" onclick="">Cook 2999</a>)</span></li>
+<li>add an interactive map using leaflet <iframe src="images/pa_population_density_map.html" width="75%" height="500px"></iframe></li>
+<li>add some references via a .bib file</li>
+<li>push it on github</li>
 </ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
-</div>
-</div>
-<div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
-<div id="ref-Cook" class="csl-entry" role="listitem">
-Cook, Joshua J. 2999. <span>“An Introduction to Quarto: A Versatile Open-Source Tool for Data Reporting and Visualization.”</span>
-</div>
-<div id="ref-Paciorek" class="csl-entry" role="listitem">
-Paciorek, Christopher. 2023. <span>“An Example Quarto Markdown File.”</span>
-</div>
-<div id="ref-Rey" class="csl-entry" role="listitem">
-Rey, Sergio J. 2009. <span>“Show Me the Code: Spatial Analysis and Open Source.”</span> <em>Journal of Geographical Systems</em> 11: 191–207.
-</div>
-<div id="ref-Singleton" class="csl-entry" role="listitem">
-Singleton, Alex David, Seth Spielman, and Chris Brunsdon. 2016. <span>“Establishing a Framework for Open Geographic Information Science.”</span> <em>International Journal of Geographical Information Science</em> 30 (8): 1507–21.
 </div>
 </div>
 </section></section>
