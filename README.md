@@ -1,9 +1,10 @@
+<img src="images/banner.png" alt="Banner Image" style="width: 100%; height: auto;" />
+
 # Intro to quarto
 
 Thank you to Nick Bearman for providing an early version of these slides.
 
 - Presentation slides available @ [here](https://github.com/ericdelmelle/introToQuarto/tree/main/docs/index.html)
-- Presentation slide for the exercise available @ [here](https://github.com/ericdelmelle/introToQuarto/blob/main/docs/exercise.html)
 - qmd document the presentation is based off [here](https://github.com/ericdelmelle/introToQuarto/tree/main/presentation_nov5.qmd)
 - intial qmd for the exercise [here](https://github.com/ericdelmelle/introToQuarto/tree/main/exercise.qmd)
 
