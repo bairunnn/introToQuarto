@@ -39,7 +39,6 @@ knitr::opts_chunk$set(fig.retina = 1)
 
 ::: {.center}
 Special thanks to Nick Bearman for sharing an earlier version of these slides.
-[Source](https://github.com/ericdelmelle/introToQuarto/presentation_nov5.qmd) 
 
 :::
 
@@ -75,7 +74,7 @@ Special thanks to Nick Bearman for sharing an earlier version of these slides.
 Way](https://the-turing-way.netlify.app/reproducible-research/overview/overview-definitions))
 
 ![[by Scriberia for The Turing Way community (CC-BY
-4.0)](https://zenodo.org/record/3678226/files/ReproducibleDefinitionGrid.jpg?download=1)](https://zenodo.org/record/3678226/files/ReproducibleDefinitionGrid.jpg?download=1){width="50%"
+4.0)](https://zenodo.org/record/3678226/files/ReproducibleDefinitionGrid.jpg?download=1)](https://zenodo.org/record/3678226/files/ReproducibleDefinitionGrid.jpg?download=1){width="60%"
 fig-align="center"}
 :::
 
@@ -165,11 +164,11 @@ Fisher, P. F. (1993). Algorithm and implementation uncertainty in viewshed analy
 ::: {.fragment}
 Also works for writing and presentations as well.
 
-- Markdown allows you to write plan text with tags - stars, hashes, etc.
+- Markdown allows you to write plain text with tags - stars, hashes, etc.
 
 - Can also do analysis in this
 
-- LaTeX is a developved version of Markdown (or Markdown is a simple version of LaTeX)
+- LaTeX is a developed version of Markdown (or Markdown is a simple version of LaTeX)
 
 - RMarkdown allows you to run R code
 
@@ -204,11 +203,11 @@ Also works for writing and presentations as well.
 ## How does Quarto work?
 ![taken from [What is Quarto - A Quick Intro FAQ](https://github.com/jansim/tea-talk-quarto/tree/main)](images/quarto.png){width=70%}
 
-### .qmd
+## .qmd
 
 ![[qmd file](https://quarto.org/docs/get-started/hello/rstudio.html)](images/rstudio-hello.png)
 
-### .ipynb
+## .ipynb
 
 ![[jupyter notebook](https://quarto.org/docs/get-started/hello/jupyter.html)](images/jupyter-quarto-preview.png)
 
@@ -303,7 +302,7 @@ knitr::include_graphics("images/pa_population_density_map.png")
 
 :::: {.columns}
 
-::: {.column .fragment width="50%"}
+
 
 **Strengths** 💪
 
@@ -314,9 +313,6 @@ knitr::include_graphics("images/pa_population_density_map.png")
 - Automation / Generated Contents
 - Interactivity
 
-:::
-
-::: {.column .fragment width="50%"}
 
 **Weaknesses** 😢
 
@@ -325,7 +321,6 @@ knitr::include_graphics("images/pa_population_density_map.png")
 - New Syntax to learn
 - Software Maturity
 
-:::
 
 ::::
 

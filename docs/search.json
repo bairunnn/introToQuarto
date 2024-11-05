@@ -312,7 +312,7 @@
     "href": "index.html#writing-presentations",
     "title": "Introduction to Quarto",
     "section": "Writing, Presentations",
-    "text": "Writing, Presentations\n\nAlso works for writing and presentations as well.\n\nMarkdown allows you to write plan text with tags - stars, hashes, etc.\nCan also do analysis in this\nLaTeX is a developved version of Markdown (or Markdown is a simple version of LaTeX)\nRMarkdown allows you to run R code\nQuarto allows you to run other code (Python, R, etc.)\nThis presentation is written in Quarto 😄"
+    "text": "Writing, Presentations\n\nAlso works for writing and presentations as well.\n\nMarkdown allows you to write plain text with tags - stars, hashes, etc.\nCan also do analysis in this\nLaTeX is a developed version of Markdown (or Markdown is a simple version of LaTeX)\nRMarkdown allows you to run R code\nQuarto allows you to run other code (Python, R, etc.)\nThis presentation is written in Quarto 😄"
   },
   {
     "objectID": "index.html#lets-dive-into-quarto",
@@ -333,7 +333,7 @@
     "href": "index.html#how-does-quarto-work",
     "title": "Introduction to Quarto",
     "section": "How does Quarto work?",
-    "text": "How does Quarto work?\n\n\n\ntaken from What is Quarto - A Quick Intro FAQ\n\n\n.qmd\n\n\n\nqmd file\n\n\n.ipynb\n\n\n\njupyter notebook"
+    "text": "How does Quarto work?\n\ntaken from What is Quarto - A Quick Intro FAQ"
   },
   {
     "objectID": "index.html#how-does-quarto-handle-code-chunks",
@@ -375,7 +375,7 @@
     "href": "index.html#strengths-weaknesses-of-quarto-for-slides",
     "title": "Introduction to Quarto",
     "section": "Strengths & Weaknesses of Quarto for slides",
-    "text": "Strengths & Weaknesses of Quarto for slides\n\n\nStrengths 💪\n\nConsistency in Output\n\nFocus on content\n\nSupport for (Explicit) Version Control (e.g. git)\nGreat for Code (in Slides)\nAutomation / Generated Contents\nInteractivity\n\n\nWeaknesses 😢\n\nHarder to do fine layouting\n\nNo WYSIWYG\n\nNew Syntax to learn\nSoftware Maturity"
+    "text": "Strengths & Weaknesses of Quarto for slides\n\nStrengths 💪\nConsistency in Output\n\nFocus on content\n\nSupport for (Explicit) Version Control (e.g. git)\nGreat for Code (in Slides)\nAutomation / Generated Contents\nInteractivity\nWeaknesses 😢\nHarder to do fine layouting\n\nNo WYSIWYG\n\nNew Syntax to learn\nSoftware Maturity"
   },
   {
     "objectID": "index.html#key-benefit-explicit-version-control-fa-code-compare",
@@ -404,5 +404,19 @@
     "title": "Introduction to Quarto",
     "section": "References",
     "text": "References\n\nSome useful references are (Rey 2009), (Singleton, Spielman, and Brunsdon 2016), (Paciorek 2023), (Cook 2999)\n\n\n\n\n\n\n\nCook, Joshua J. 2999. “An Introduction to Quarto: A Versatile Open-Source Tool for Data Reporting and Visualization.”\n\n\nPaciorek, Christopher. 2023. “An Example Quarto Markdown File.”\n\n\nRey, Sergio J. 2009. “Show Me the Code: Spatial Analysis and Open Source.” Journal of Geographical Systems 11: 191–207.\n\n\nSingleton, Alex David, Seth Spielman, and Chris Brunsdon. 2016. “Establishing a Framework for Open Geographic Information Science.” International Journal of Geographical Information Science 30 (8): 1507–21."
+  },
+  {
+    "objectID": "index.html#qmd",
+    "href": "index.html#qmd",
+    "title": "Introduction to Quarto",
+    "section": ".qmd",
+    "text": ".qmd\n\nqmd file"
+  },
+  {
+    "objectID": "index.html#ipynb",
+    "href": "index.html#ipynb",
+    "title": "Introduction to Quarto",
+    "section": ".ipynb",
+    "text": ".ipynb\n\njupyter notebook"
   }
 ]
